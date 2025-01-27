@@ -77,7 +77,7 @@ router.put('/:id', async (req, res)=>{
         res.status(500).json({error: 'Internal server error'});
     }
 })
-rout.delete('/:id', async (req, res) =>{
+router.delete('/:id', async (req, res) =>{
     try{
         const personid = req.params.id;
         const resonse = person.findByIdAndRemove(personid);
