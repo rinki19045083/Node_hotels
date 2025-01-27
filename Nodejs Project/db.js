@@ -14,5 +14,6 @@ db.on('connected', ()=>{
     console.log('connected');
 })
 
-//export db
+//export db here
 module.exports = db;
+

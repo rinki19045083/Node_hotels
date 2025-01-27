@@ -1,4 +1,4 @@
-#ignore all
+#ignore all: to ignore some unnecessary files
 /node_modules
 
 #other
