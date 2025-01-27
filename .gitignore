@@ -1,4 +1,5 @@
 #ignore all: to ignore some unnecessary files
 /node_modules
+/Nodejs Project/.env
 
 #other
