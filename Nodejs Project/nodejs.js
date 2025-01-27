@@ -3,9 +3,11 @@ const person = require('../data/person')
 const menu = require('../data/menu')
 const db = require('./db')
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const app = express()
 app.use(bodyParser.json());
-const port = 3000
+
+const port = process.env.PORT || 3000;
 
 
 //bodyParser: automatically modify the data from the request body: in the actually format: bodyParser.JSON() provide it in json format
