@@ -1,6 +1,6 @@
 const express = require('express')
-const person = require('../data/person')
-const menu = require('../data/menu')
+const person = require('./data/person')
+const menu = require('./data/menu')
 const db = require('./db')
 const bodyParser = require('body-parser');
 require('dotenv').config();
@@ -17,11 +17,11 @@ app.get('/', function (req, res){
 
 
 //import routes
-const personRoutes = require('../routes/personRoutes');
+const personRoutes = require('./routes/personRoutes');
 app.use('/person', personRoutes);
 //menu route import:
 
-const menuRoutes = require('../routes/menuRoute');
+const menuRoutes = require('./routes/menuRoute');
 app.use('/menu', menuRoutes);
 
 //async and await: using try: if successful and catch: if successful
