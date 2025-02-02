@@ -20,13 +20,13 @@ const logRequest = (req, res, next)=>{
 //app.use(logRequest);
 
 //bodyParser: automatically modify the data from the request body: in the actually format: bodyParser.JSON() provide it in json format
-
+//authentication:
+app.use(passport.initialize());
 const localauth = passport.authenticate('local', {session: false} );
 app.get('/'  ,function (req, res){
     res.send("Hello! i am Rinki");
 })
-//authentication:
-app.use(passport.initialize());
+
 
 
 
@@ -34,8 +34,8 @@ app.use(passport.initialize());
 //import routes
 const personRoutes = require('./routes/personRoutes');
 app.use('/person',logRequest,localauth,  personRoutes);
-//menu route import:
 
+//menu route import:
 const menuRoutes = require('./routes/menuRoute');
 app.use('/menu', menuRoutes);
 
